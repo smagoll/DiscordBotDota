@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "umS5D1qrSTtRUacMOtfvKweEIBMRF67nrbTfSPN1KMM1jjfHi8llE4UdXVmTZFL0RG1tyEQenSZt5/OU3+vIHQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\purga\\source\\repos\\DiscordBot\\DiscordBot\\DiscordBot.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\purga\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

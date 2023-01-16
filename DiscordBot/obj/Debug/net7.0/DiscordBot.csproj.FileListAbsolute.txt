@@ -1,0 +1,17 @@
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\DiscordBot.exe
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\DiscordBot.deps.json
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\DiscordBot.runtimeconfig.json
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\DiscordBot.dll
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\DiscordBot.pdb
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.csproj.AssemblyReference.cache
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.AssemblyInfoInputs.cache
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.AssemblyInfo.cs
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.csproj.CoreCompileInputs.cache
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.dll
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\refint\DiscordBot.dll
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.pdb
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.genruntimeconfig.cache
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\ref\DiscordBot.dll
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\purga\source\repos\DiscordBot\DiscordBot\obj\Debug\net7.0\DiscordBot.csproj.CopyComplete
