@@ -1,10 +1,25 @@
 {
   "version": 2,
-  "dgSpecHash": "umS5D1qrSTtRUacMOtfvKweEIBMRF67nrbTfSPN1KMM1jjfHi8llE4UdXVmTZFL0RG1tyEQenSZt5/OU3+vIHQ==",
+  "dgSpecHash": "O6UvBrKF96ONO/J3NlGzBJ5zWbg+C7L2DWmFI6lBuOS/8+vQKfSDZAgzRJFBTXcmCnHlNfnT8RC3updonHKBmw==",
   "success": true,
   "projectFilePath": "C:\\Users\\purga\\source\\repos\\DiscordBot\\DiscordBot\\DiscordBot.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\purga\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512"
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net\\3.9.0\\discord.net.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.commands\\3.9.0\\discord.net.commands.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.core\\3.9.0\\discord.net.core.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.interactions\\3.9.0\\discord.net.interactions.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.rest\\3.9.0\\discord.net.rest.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.webhook\\3.9.0\\discord.net.webhook.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\discord.net.websocket\\3.9.0\\discord.net.websocket.3.9.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\microsoft.win32.systemevents\\7.0.0\\microsoft.win32.systemevents.7.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\newtonsoft.json\\13.0.2\\newtonsoft.json.13.0.2.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.collections.immutable\\5.0.0\\system.collections.immutable.5.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.drawing.common\\7.0.0\\system.drawing.common.7.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.interactive.async\\5.0.0\\system.interactive.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.linq.async\\5.0.0\\system.linq.async.5.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.reactive\\5.0.0\\system.reactive.5.0.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.valuetuple\\4.5.0\\system.valuetuple.4.5.0.nupkg.sha512"
   ],
   "logs": []
 }

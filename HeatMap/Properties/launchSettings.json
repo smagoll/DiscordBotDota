@@ -1,0 +1,11 @@
+{
+  "profiles": {
+    "HeatMap": {
+      "commandName": "Project"
+    },
+    "Профиль 1": {
+      "commandName": "Executable",
+      "executablePath": "C:\\Users\\purga\\AndroidStudioProjects\\proga\\HeatMapSharp\\HeatMap\\HeatMap\\bin\\Debug\\netcoreapp3.1\\HeatMap.deps.json"
+    }
+  }
+}

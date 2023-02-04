@@ -1,0 +1,10 @@
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\bin\Debug\netcoreapp3.1\HeatMap.deps.json
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\bin\Debug\netcoreapp3.1\HeatMap.dll
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\bin\Debug\netcoreapp3.1\HeatMap.pdb
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.csproj.AssemblyReference.cache
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.AssemblyInfoInputs.cache
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.AssemblyInfo.cs
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.csproj.CoreCompileInputs.cache
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.dll
+C:\Users\purga\AndroidStudioProjects\proga\HeatMapSharp\HeatMap\HeatMap\obj\Debug\netcoreapp3.1\HeatMap.pdb

@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "UTIfKMSnkgVd9f/A762pG4gftE2u5bUTaNgti2+d51hou4Rx3MlQgzusshl+zQSMRECFHov5BXDqkvNdeMS1FA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\purga\\AndroidStudioProjects\\proga\\HeatMapSharp\\HeatMap\\HeatMap\\HeatMap.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\purga\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
+    "C:\\Users\\purga\\.nuget\\packages\\system.drawing.common\\4.7.0\\system.drawing.common.4.7.0.nupkg.sha512"
+  ],
+  "logs": []
+}
