@@ -14,11 +14,12 @@ namespace DiscordBot
         public static List<ApplicationCommandProperties> GetAllCommands()
         {
             List<ApplicationCommandProperties> applicationCommandProperties = new List<ApplicationCommandProperties>();
-            applicationCommandProperties.Add(GetWardmap().Build());
+            applicationCommandProperties.Add(CommandGetWardMap().Build());
+            applicationCommandProperties.Add(CommandGetStatsLastMatches().Build());
             return applicationCommandProperties;
         }
 
-        private static SlashCommandBuilder GetWardmap()
+        private static SlashCommandBuilder CommandGetWardMap()
         {
             //wardmap
             var globalCommandWardmapObs = new SlashCommandBuilder();
@@ -43,6 +44,19 @@ namespace DiscordBot
                                                                     .WithRequired(true)
                                                                     .WithType(ApplicationCommandOptionType.String)));
             return globalCommandWardmapObs;
+        }
+
+        private static SlashCommandBuilder CommandGetStatsLastMatches()
+        {
+            var globalCommandGetStats = new SlashCommandBuilder();
+            globalCommandGetStats.WithName("stats")
+                                 .WithDescription("stats last matches")
+                                 .AddOption(new SlashCommandOptionBuilder()
+                                                                    .WithName("link")
+                                                                    .WithDescription("steam link user")
+                                                                    .WithRequired(true)
+                                                                    .WithType(ApplicationCommandOptionType.String));
+            return globalCommandGetStats;
         }
     }
 }

@@ -15,7 +15,7 @@ namespace DiscordBot
 {
     internal class Bot
     {
-        private static DiscordSocketClient _client;
+        public static DiscordSocketClient _client;
 
         public static Task Main(string[] args) => new Bot().MainAsync();
 
@@ -62,6 +62,9 @@ namespace DiscordBot
                 case "wardmap":             
                     await ResponseCommands.HandleWardmapCommand(command);
                     break;
+                case "stats":
+                    await ResponseCommands.HandleStatsCommand(command);
+                    break;
             }
         }
 
@@ -80,6 +83,14 @@ namespace DiscordBot
             wardMap.Save($@"..\..\..\resourses\{id}.jpg");
             var channel = _client.GetChannel(id) as IMessageChannel;
             await channel.SendFileAsync($@"..\..\..\resourses\{id}.jpg");
+        }
+        
+        public static async Task SendStats(ulong id, string link)
+        {
+            var info = MatchStats.GetInfo(link);
+            var channel = _client.GetChannel(id) as IMessageChannel;
+            var msg = await channel.SendMessageAsync("1 second...");
+            await msg.ModifyAsync(msg => msg.Content = info);
         }
     }
 }

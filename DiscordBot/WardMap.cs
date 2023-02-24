@@ -12,34 +12,10 @@ using static System.Collections.Specialized.BitVector32;
 
 namespace DiscordBot
 {
-    class Hero
-    {
-        private int win = 0;
-        private int lose = 0;
-        public int IdHero { get; set; }
-        public int Win
-        {
-            get { return win; }
-            set { win = value; }
-        }
-        public int Lose
-        {
-            get { return lose; }
-            set { lose = value; }
-        }
-        public int CountMatches
-        {
-            get { return win + lose; }
-        }
-        public int PercentWin
-        {
-            get { return (100 / CountMatches * win); }
-        }
-    }
+
 
     internal class WardMap
     {
-        public static List<Hero> heroes = new();
 
         private static void Main(string[] args)
         {
@@ -55,54 +31,17 @@ namespace DiscordBot
             //Console.WriteLine(steamID32);
         }
 
-        
-
-        public static long GetSteamID32(string URL)
-        {
-            XmlDocument doc = new XmlDocument();
-            doc.Load(URL);
-            string steamID64 = "";
-            XPathNavigator navigator = doc.CreateNavigator();
-            XPathNodeIterator nodes = navigator.Select("/profile/steamID64");
-            while (nodes.MoveNext())
-            {
-                steamID64 = nodes.Current.ToString();
-            }
-
-            var steamID32 = Convert.ToInt64(steamID64) - 76561197960265728;
-            return steamID32;
-        }
-
-        private static string SendGetRequestOpenDota(string URL)
-        {
-            System.Net.WebRequest reqGET = System.Net.WebRequest.Create(URL);
-            System.Net.WebResponse resp = reqGET.GetResponse();
-            Stream stream = resp.GetResponseStream();
-            StreamReader sr = new StreamReader(stream);
-            string s = sr.ReadToEnd();
-            return s;
-        }
-
-        private static string? GetName(long steamID32)
-        {
-            string URL = $@"https://api.opendota.com/api/players/{steamID32}";
-            var response = SendGetRequestOpenDota(URL);
-            JObject jsonResponse = JObject.Parse(response);
-            string name = (string)jsonResponse["profile"]["personaname"];
-            return name;
-        }
-
         private static JObject GetWardMap(long steamID32)
         {
             string URL = $@"https://api.opendota.com/api/players/{steamID32}/wardmap";
-            var response = SendGetRequestOpenDota(URL);
+            var response = OpenDotaAPI.SendGetRequestOpenDota(URL);
             JObject jsonResponse = JObject.Parse(response);
             return jsonResponse;
         }
 
         public static System.Drawing.Image GetWardMapObs(string link)
         {
-            var steamID32 = GetSteamID32($@"{link}/?xml=1");
+            var steamID32 = OpenDotaAPI.GetSteamID32(link);
             var wardMap = GetWardMap(steamID32);
             var image = CreateWardMap((JObject)wardMap["obs"]);
             return image;
@@ -111,34 +50,11 @@ namespace DiscordBot
         
         public static System.Drawing.Image GetWardMapSen(string link)
         {
-            var steamID32 = GetSteamID32($@"{link}/?xml=1");
+            var steamID32 = OpenDotaAPI.GetSteamID32(link);
             var wardMap = GetWardMap(steamID32);
             var image = CreateWardMap((JObject)wardMap["sen"]);
             return image;
 
-        }
-
-        private static JArray GetMatches(long steamID32)
-        {
-            string URL = $@"https://api.opendota.com/api/players/{steamID32}/matches";
-            var response = SendGetRequestOpenDota(URL);
-            JArray jsonResponse = JArray.Parse(response);
-            var arrayMatches = JArray.FromObject(jsonResponse.Take(100));
-            return arrayMatches;
-        }
-
-        private static async Task<JObject> GetJsonBuildAsync(string name)
-        {
-            string json = File.ReadAllText($@"..\..\..\build\{name}");
-            var jsonResponse = JObject.Parse(json);
-            return jsonResponse;
-        }
-
-        private static string? GetHero(int id)
-        {
-            JObject hero = GetJsonBuildAsync("heroes.json").Result;
-            string localized_name = (string)hero[$"{id}"]["localized_name"];
-            return localized_name;
         }
 
         private static Color HeatMapColor(decimal value, decimal min, decimal max)
@@ -212,79 +128,6 @@ namespace DiscordBot
             }
             return image;
             //image.Save($"..\\..\\..\\resourses\\minimap_{wardMap.Path}.jpg");
-        }
-
-        private static void AddHeroWL(JArray matches)
-        {
-            foreach (var match in matches)
-            {
-
-                int idHero = int.Parse((string)match["hero_id"]);
-                var playerSlot = int.Parse((string)match["player_slot"]);
-                var radiantWin = bool.Parse((string)match["radiant_win"]);
-                bool result = false;
-                if (playerSlot < 128)//0-127 radiant, 127-255 dire
-                {
-                    if (radiantWin)
-                    {
-                        result = true;
-                    }
-                    else
-                    {
-                        result = false; ;
-                    }
-                }
-                else
-                {
-                    if (radiantWin)
-                    {
-                        result = false;
-                    }
-                    else
-                    {
-                        result = true;
-                    }
-                }
-                if (heroes.Where(x => x.IdHero == idHero).Count() == 0)//проверка есть ли такой герой в списке
-                {
-                    Hero hero = new Hero();
-                    hero.IdHero = idHero;
-                    if (result)
-                    {
-                        hero.Win++;
-                    }
-                    else
-                    {
-                        hero.Lose++;
-                    }
-                    heroes.Add(hero);
-                }
-                else
-                {
-                    var hero = heroes.Where(x => x.IdHero == idHero).ToArray()[0];
-                    if (result)
-                    {
-                        hero.Win++;
-                    }
-                    else
-                    {
-                        hero.Lose++;
-                    }
-                }
-            }
-        }
-
-        private static void WriteInfoHero(List<Hero> heroInfo)
-        {
-            foreach (var q in heroInfo)
-            {
-                Console.WriteLine("Герой: " + GetHero(q.IdHero));
-                Console.WriteLine("Количество игр: " + q.CountMatches.ToString());
-                Console.WriteLine("Процент побед: " + q.PercentWin.ToString() + "%");
-                Console.WriteLine("Победы: " + q.Win.ToString());
-                Console.WriteLine("Поражения: " + q.Lose.ToString());
-                Console.WriteLine("---------");
-            }
         }
     }
 }

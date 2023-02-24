@@ -29,5 +29,17 @@ namespace DiscordBot
                 await Bot.SendWardMap((ulong)command.ChannelId, link, false);
             }
         }
+
+        public static async Task HandleStatsCommand(SocketSlashCommand command)
+        {
+            var link = command.Data.Options.First().Value.ToString();
+            //await Bot.SendStats((ulong)command.ChannelId, link);
+            var channel = Bot._client.GetChannel((ulong)command.ChannelId) as IMessageChannel;
+            var msg = await channel.SendMessageAsync(" 1 second...");
+            var info = MatchStats.GetInfo(link);
+            await msg.ModifyAsync(msg => msg.Content = info);
+
+
+        }
     }
 }
