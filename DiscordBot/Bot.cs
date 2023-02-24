@@ -25,7 +25,7 @@ namespace DiscordBot
             _client.Log += Log;
             _client.Ready += Client_Ready;
             _client.SlashCommandExecuted += SlashCommandHandler;
-            var token = "MTA2MzQ1NjAwOTU4NDExNTcxMg.GrMHXy.vRvPAUoOJ193nsVijvD1WREG6WtjlhaIkdnbTs";
+            var token = "your token";
 
             await _client.LoginAsync(TokenType.Bot, token);
             await _client.StartAsync();
